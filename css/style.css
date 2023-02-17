@@ -1407,7 +1407,7 @@ input[type="search"]::-webkit-search-results-decoration {
 }
 
 .filter-button:hover {
-  background-color: #fcfcfc4d;
+  background-color:var(--basic-extra-light);
   border: 2px solid var(--basic-extra-light);
   color: var(--basic-extra-dark);
 }
