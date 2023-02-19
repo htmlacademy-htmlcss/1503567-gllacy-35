@@ -1,75 +1,71 @@
-const contactsButton = document.querySelector('.feedback-button');
-const modalContainer = document.querySelector('.popup');
-
-contactsButton.addEventListener('click', (evt) => {
-  evt.preventDefault();
-  modalContainer.classList.add('popup-active');
-});
-
-modalContainer.addEventListener('click', (evt) => {
-  if (evt.target.closest('.cross-btn')) {
-    evt.preventDefault();
-    modalContainer.classList.remove('popup-active');
-  }
-  if (evt.target.closest('.popup-body')) {
-    return;
-  }
-  evt.preventDefault();
-  modalContainer.classList.remove('popup-active');
-});
-
-document.addEventListener('keydown', (evt) => {
-  if (evt.key === 'Escape') {
-    evt.preventDefault();
-    modalContainer.classList.remove('popup-active');
-  }
-});
-
-const sliderButtonPrev = document.querySelector('.slider-preview');
-const sliderButtonNext = document.querySelector('.slider-next');
 const slides = document.querySelectorAll('.slider-item');
-const bullets = document.querySelectorAll('.bullet');
+const buttonPrev = document.querySelector('.slider-button-prev');
+const buttonNext = document.querySelector('.slider-button-next');
+const bullets = document.querySelectorAll('.slider-pagination-button');
+const slidesAmount = slides.length;
+let currentIndex = 0;
 
-let currentSlide = 0;
+const onSlideChange = (index) => {
+  currentIndex = index;
+  const activeSlide = document.querySelector('.slider-item.active');
+  const activeBullet = document.querySelector('.slider-pagination-button.active');
 
-const removeSlideActiveState = () => {
-  slides[currentSlide].classList.remove('active');
-  bullets[currentSlide].classList.remove('bullet-current');
-};
-
-const addSlideActiveState = () => {
-  slides[currentSlide].classList.add('active');
-  document.body.style.backgroundColor = slides[currentSlide].dataset.theme;
-  bullets[currentSlide].classList.add('bullet-current');
-};
-
-sliderButtonPrev.addEventListener('click', (evt) => {
-  evt.preventDefault();
-  removeSlideActiveState();
-  if (currentSlide === 0) {
-    currentSlide = slides.length - 1;
-  } else {
-    currentSlide -= 1;
-  }
-  addSlideActiveState();
-});
-
-sliderButtonNext.addEventListener('click', (evt) => {
-  evt.preventDefault();
-  removeSlideActiveState();
-  if (currentSlide === slides.length - 1) {
-    currentSlide = 0;
-  } else {
-    currentSlide += 1;
-  }
-  addSlideActiveState();
-});
-
-bullets.forEach((element, index) => {
-  element.addEventListener('click', (evt) => {
-    evt.preventDefault();
-    removeSlideActiveState();
-    currentSlide = index;
-    addSlideActiveState();
+  document.body.classList.forEach((currentClass) => {
+    if (currentClass.startsWith("theme-")) {
+      document.body.classList.remove(currentClass);
+    }
   });
+
+  document.body.classList.add(`theme-${slides[index].dataset.theme}`);
+
+  activeSlide.classList.remove('active');
+  slides[index].classList.add('active');
+
+  activeBullet.classList.remove('active');
+  bullets[index].classList.add('active');
+};
+
+buttonPrev.addEventListener('click', (e) => {
+  e.preventDefault();
+  currentIndex--;
+  currentIndex = (currentIndex < 0) ? slidesAmount - 1 : currentIndex;
+  onSlideChange(currentIndex);
+});
+
+buttonNext.addEventListener('click', (e) => {
+  e.preventDefault();
+  currentIndex++;
+  currentIndex = (currentIndex === slidesAmount) ? 0 : currentIndex;
+  onSlideChange(currentIndex);
+});
+
+bullets.forEach((element, index) => element.addEventListener('click', () => onSlideChange(index)));
+
+
+const modalOpenButton = document.querySelector('.modal-button-open-js')
+const modalContainer = document.querySelector('.modal-container')
+const modalInner = document.querySelector('.modal-container .modal')
+const modalCloseButton = document.querySelector('.modal-button-close-js')
+
+modalOpenButton.addEventListener('click', (event) => {
+  event.preventDefault()
+  modalContainer.classList.add('is-open')
+});
+
+[modalContainer, modalCloseButton].forEach((element) => {
+  element.addEventListener('click', (event) => {
+    event.preventDefault()
+    modalContainer.classList.remove('is-open')
+  })
+});
+
+modalInner.addEventListener('click', (event) => {
+  event.stopPropagation();
+});
+
+document.addEventListener('keydown', (event) => {
+  if (event.key === 'Escape') {
+    event.preventDefault()
+    modalContainer.classList.remove('is-open')
+  }
 })
