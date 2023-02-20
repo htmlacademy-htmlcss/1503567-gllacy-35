@@ -22,8 +22,6 @@
   font-display: swap;
 }
 
-
-
 .visually-hidden {
   position: absolute;
   width: 1px;
@@ -151,7 +149,6 @@ img {
   margin: 0 auto;
   padding: 0 98px;
 }
-
 
 .header {
   display: flex;
@@ -355,7 +352,6 @@ img {
 
 .menu-item-dropdown:focus-within .menu-link-dropdown {
   color: #FCFCFC;
-
 }
 
 .menu-sublist-link:focus {
@@ -384,12 +380,10 @@ img {
   color: #FCFCFC;
 }
 
-
 .dropdown {
   flex-shrink: 0;
   position: relative;
 }
-
 
 .dropdown-button {
   display: flex;
@@ -437,7 +431,6 @@ img {
 .dropdown-button-search {
   padding: 6px;
 }
-
 
 .dropdown-button-search .dropdown-img {
   margin: 0;
@@ -713,7 +706,6 @@ img {
   max-width: max-content;
 }
 
-
 .theme-pink .slider-image-container {
   background-image: url(../images/circle-pink.svg);
   background-repeat: no-repeat;
@@ -740,7 +732,6 @@ img {
   width: 312px;
   background-size: 100%;
 }
-
 
 .slider-image {
   display: block;
@@ -774,7 +765,6 @@ img {
   margin: 0 0 48px 0;
   padding: 0;
 }
-
 
 .slider-interaction {
   display: flex;
@@ -1141,7 +1131,6 @@ img {
   border-radius: 16px;
 }
 
-
 .about-us-text {
   font-family: "Inter", "Arial", sans-serif;
   font-weight: 400;
@@ -1151,7 +1140,6 @@ img {
   margin: 0;
   padding-left: 64px;
   position: relative;
-
 }
 
 .about-us-text::before {
@@ -1367,7 +1355,6 @@ img {
   margin-bottom: 11px;
 }
 
-
 .delivery-tooltip {
   position: relative;
   padding-right: 18px;
@@ -1433,7 +1420,7 @@ img {
   cursor: pointer;
 }
 
-.delivery-tooltip-button:hover+.delivery-tooltip-description {
+.delivery-tooltip-button:hover + .delivery-tooltip-description {
   display: block;
 }
 
@@ -1579,7 +1566,6 @@ img {
   min-width: 104px;
 }
 
-
 .footer-info {
   display: grid;
   grid-template-columns: repeat(2, auto);
@@ -1601,7 +1587,6 @@ img {
   margin: 0;
 }
 
-
 .footer-link {
   font-family: "Inter", "Arial", sans-serif;
   font-weight: 400;
@@ -1619,7 +1604,6 @@ img {
   background-repeat: no-repeat;
   background-position: top 0 left 4px;
 }
-
 
 .footer-copyrights-text {
   font-family: "Inter", "Arial", sans-serif;
@@ -1961,8 +1945,7 @@ img {
   left: 0;
 }
 
-
-.input-radio:checked+.control-radio::before {
+.input-radio:checked + .control-radio::before {
   position: absolute;
   content: "";
   width: 6px;
@@ -1974,38 +1957,38 @@ img {
   transform: translateX(-50%) translateY(-50%);
 }
 
-.input-radio:hover+.control-radio {
+.input-radio:hover + .control-radio {
   border: 1px solid #FCFCFC;
   cursor: pointer;
 }
 
-.input-radio:hover+.control-radio::before {
+.input-radio:hover + .control-radio::before {
   background-color: #FCFCFC;
 }
 
-.input-radio:checked:focus+.control-radio {
+.input-radio:checked:focus + .control-radio {
   border: 1px solid #FCFCFC;
   outline: none;
 }
 
-.input-radio:checked:focus+.control-radio::before {
+.input-radio:checked:focus + .control-radio::before {
   background-color: #FCFCFC;
   outline: none;
 }
 
-.input-radio:active+.control-radio {
+.input-radio:active + .control-radio {
   opacity: 0.6;
 }
 
-.input-radio:active+.control-radio::before {
+.input-radio:active + .control-radio::before {
   opacity: 0.6;
 }
 
-.input-radio:disabled+.control-radio {
+.input-radio:disabled + .control-radio {
   opacity: 0.4;
 }
 
-.input-radio:disabled+.control-radio::before {
+.input-radio:disabled + .control-radio::before {
   opacity: 0.4;
 }
 
@@ -2019,25 +2002,25 @@ img {
   left: 0;
 }
 
-.input-checkbox:checked+.control-check {
+.input-checkbox:checked + .control-check {
   background-image: url(../images/check-on.svg);
 }
 
-.input-checkbox:hover+.control-check,
-.input-checkbox:focus+.control-check {
+.input-checkbox:hover + .control-check,
+.input-checkbox:focus + .control-check {
   background-image: url(../images/check-off-hover.svg);
 }
 
-.input-checkbox:checked:hover+.control-check,
-.input-checkbox:checked:focus+.control-check {
+.input-checkbox:checked:hover + .control-check,
+.input-checkbox:checked:focus + .control-check {
   background-image: url(../images/check-on-hover.svg);
 }
 
-.input-checkbox:active+.control-check {
+.input-checkbox:active + .control-check {
   opacity: 0.6;
 }
 
-.input-checkbox:disabled+.control-check {
+.input-checkbox:disabled + .control-check {
   opacity: 0.4;
 }
 
@@ -2131,7 +2114,6 @@ img {
   text-align: center;
   background-color: transparent;
 }
-
 
 .pagination-button {
   box-sizing: border-box;
