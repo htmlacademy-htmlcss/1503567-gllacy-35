@@ -1105,7 +1105,7 @@ img {
 
 .about-us {
   background-color: #ff2f64;
-  background-image: url(../images/about-us-border-waffle.jpg);
+  background-image: url(../images/backgrounds/about-us-border-waffle.jpg);
   padding: 24px;
   border-radius: 16px;
   margin-bottom: 80px;
@@ -1186,7 +1186,7 @@ img {
   padding: 32px 235px 67px 32px;
   border-radius: 16px;
   background-color: #ffffff;
-  background-image: url(../images/subscription-news.png);
+  background-image: url(../images/backgrounds/subscription-news.png);
   background-repeat: no-repeat;
   background-position: top right;
   display: flex;
@@ -1215,7 +1215,7 @@ img {
 }
 
 .subscription-form {
-  background-image: url(../images/subscription-form-background.jpg);
+  background-image: url(../images/backgrounds/subscription-form-background.jpg);
   border-radius: 16px;
   padding: 6px;
   display: flex;
@@ -1300,7 +1300,7 @@ img {
   padding: 64px;
   border-radius: 16px;
   background-color: #ffffff;
-  background-image: url(../images/delivery-background.jpg);
+  background-image: url(../images/backgrounds/delivery-background.jpg);
   background-repeat: no-repeat;
   background-position: top right;
   background-size: cover;
@@ -1492,7 +1492,7 @@ img {
   padding: 64px;
   border-radius: 16px;
   background-color: #ffffff;
-  background-image: url(../images/contacts-background.jpg);
+  background-image: url(../images/backgrounds/contacts-background.jpg);
   background-repeat: no-repeat;
   background-position: top right;
   background-size: cover;
