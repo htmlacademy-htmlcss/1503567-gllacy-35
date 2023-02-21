@@ -1600,7 +1600,7 @@ img {
 .footer-copyrights {
   justify-self: end;
   padding-top: 34px;
-  background-image: url("../images/logo-html-academy.svg");
+  background-image: url("../images/logo/logo-html-academy.svg");
   background-repeat: no-repeat;
   background-position: top 0 left 4px;
 }
