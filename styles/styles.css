@@ -628,7 +628,7 @@ img {
   width: 16px;
   height: 16px;
   border: 0;
-  background-image: url(../images/cart-button-delete.svg);
+  background-image: url(../images/assets/cart-button-delete.svg);
   background-repeat: no-repeat;
   background-position: center center;
   background-color: transparent;
@@ -707,19 +707,19 @@ img {
 }
 
 .theme-pink .slider-image-container {
-  background-image: url(../images/circle-pink.svg);
+  background-image: url(../images/slider/circle-pink.svg);
   background-repeat: no-repeat;
   background-position: center center;
 }
 
 .theme-blue .slider-image-container {
-  background-image: url(../images/circle-blue.svg);
+  background-image: url(../images/slider/circle-blue.svg);
   background-repeat: no-repeat;
   background-position: center center;
 }
 
 .theme-yellow .slider-image-container {
-  background-image: url(../images/circle-yellow.svg);
+  background-image: url(../images/slider/circle-yellow.svg);
   background-repeat: no-repeat;
   background-position: center center;
 }
@@ -1160,19 +1160,19 @@ img {
 
 
 .about-us-text-ice-cream::before {
-  background-image: url(../images/ice-cream.svg);
+  background-image: url(../images/assets/ice-cream.svg);
 }
 
 .about-us-text-cow::before {
-  background-image: url(../images/cow.svg);
+  background-image: url(../images/assets/cow.svg);
 }
 
 .about-us-text-natural::before {
-  background-image: url(../images/natural.svg);
+  background-image: url(../images/assets/natural.svg);
 }
 
 .about-us-text-temperature::before {
-  background-image: url(../images/temperature.svg);
+  background-image: url(../images/assets/temperature.svg);
 }
 
 .subscription-container {
@@ -1373,7 +1373,7 @@ img {
   position: absolute;
   width: 14px;
   height: 14px;
-  background-image: url(../images/delivery-tooltip.svg);
+  background-image: url(../images/assets/delivery-tooltip.svg);
   padding: 0;
   border-radius: 50%;
   background-repeat: no-repeat;
@@ -1572,7 +1572,7 @@ img {
   gap: 8px 15px;
   max-width: 360px;
   padding-left: 34px;
-  background-image: url("../images/footer-heart.svg");
+  background-image: url("../images/assets/footer-heart.svg");
   background-repeat: no-repeat;
   background-position: top 2px left 11px;
   margin-left: 9px;
@@ -1775,7 +1775,7 @@ img {
 
 .breadcrumbs-item:not(:last-child) {
   padding-right: 29px;
-  background-image: url(../images/arrow-breadcrumbs.svg);
+  background-image: url(../images/assets/arrow-breadcrumbs.svg);
   background-repeat: no-repeat;
   background-position: center right 9px;
 }
@@ -1837,7 +1837,7 @@ img {
   border: 0;
   border-radius: 20px;
   background-color: rgba(252, 252, 252, 0.3);
-  background-image: url(../images/arrow.svg);
+  background-image: url(../images/assets/arrow.svg);
   background-repeat: no-repeat;
   background-position: center right 13px;
   appearance: none;
@@ -1997,23 +1997,23 @@ img {
   position: absolute;
   width: 16px;
   height: 16px;
-  background-image: url(../images/check-off.svg);
+  background-image: url(../images/assets/check-off.svg);
   background-color: transparent;
   left: 0;
 }
 
 .input-checkbox:checked + .control-check {
-  background-image: url(../images/check-on.svg);
+  background-image: url(../images/assets/check-on.svg);
 }
 
 .input-checkbox:hover + .control-check,
 .input-checkbox:focus + .control-check {
-  background-image: url(../images/check-off-hover.svg);
+  background-image: url(../images/assets/check-off-hover.svg);
 }
 
 .input-checkbox:checked:hover + .control-check,
 .input-checkbox:checked:focus + .control-check {
-  background-image: url(../images/check-on-hover.svg);
+  background-image: url(../images/assets/check-on-hover.svg);
 }
 
 .input-checkbox:active + .control-check {
@@ -2123,7 +2123,7 @@ img {
   padding: 0;
   border: 2px solid transparent;
   border-radius: 50px;
-  background-image: url(../images/arrow-black.svg);
+  background-image: url(../images/assets/arrow-black.svg);
   background-color: transparent;
   background-repeat: no-repeat;
   background-position: center center;
@@ -2143,13 +2143,13 @@ img {
   background-color: rgba(252, 252, 252, 0.3);
   border-color: #fcfcfc;
   cursor: pointer;
-  background-image: url(../images/arrow-white.svg);
+  background-image: url(../images/assets/arrow-white.svg);
 }
 
 .pagination-button:active {
   background-color: #fcfcfc;
   border-color: #fcfcfc;
-  background-image: url(../images/arrow-black.svg);
+  background-image: url(../images/assets/arrow-black.svg);
 }
 
 .pagination-button:disabled {
@@ -2176,4 +2176,58 @@ img {
 
 .catalog-footer-button {
   margin-right: 15px;
+}
+
+.loading {
+  display: inline-flex;
+  align-items: center;
+}
+
+.loading-red {
+  display: inline-flex;
+  align-items: center;
+}
+
+.loading::after {
+  content: "";
+  width: 14px;
+  height: 14px;
+  min-width: 14px;
+  min-height: 14px;
+  margin-left: 9px;
+  border-radius: 50%;
+  border: 2px solid rgba(36, 36, 36, 0.24);
+  border-bottom-color: #242424;
+  flex-shrink: 0;
+  animation-name: rotate;
+  animation-duration: 1s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+
+.loading-red::after {
+  content: "";
+  width: 14px;
+  height: 14px;
+  min-width: 14px;
+  min-height: 14px;
+  margin-left: 9px;
+  border-radius: 50%;
+  border: 2px solid rgba(252, 252, 252, 0.25);
+  border-bottom-color: #fcfcfc;
+  flex-shrink: 0;
+  animation-name: rotate;
+  animation-duration: 1s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
 }
