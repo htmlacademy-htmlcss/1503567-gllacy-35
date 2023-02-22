@@ -1158,7 +1158,6 @@ img {
   background-size: 32px 32px;
 }
 
-
 .about-us-text-ice-cream::before {
   background-image: url(../images/assets/ice-cream.svg);
 }
@@ -1554,7 +1553,6 @@ img {
   align-items: start;
   box-sizing: border-box;
 }
-
 
 .footer-socials {
   display: grid;
