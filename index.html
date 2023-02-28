@@ -71,7 +71,7 @@
           <form class="dropdown-form dropdown-form-search" action="https://echo.htmlacademy.ru/" method="get">
             <label class="dropdown-label">
               <span class="visually-hidden">Поиск.</span>
-              <input class="dropdown-input" type="text" name="search" placeholder="Поиск по сайту">
+              <input class="dropdown-input search" type="search" name="search" placeholder="Поиск по сайту" required>
             </label>
           </form>
         </div>
@@ -88,14 +88,15 @@
             <h2 class="dropdown-title">Личный кабинет</h2>
             <label class="dropdown-label">
               <span class="visually-hidden">E-mail.</span>
-              <input class="dropdown-input" type="email" name="email" placeholder="E-mail" value="email@example.com">
+              <input class="dropdown-input" type="email" name="email" placeholder="E-mail" value="email@example.com"
+                required>
             </label>
             <label class="dropdown-label">
               <span class="visually-hidden">Пароль.</span>
-              <input class="dropdown-input" type="password" name="password" placeholder="Пароль">
+              <input class="dropdown-input" type="password" name="password" placeholder="Пароль" required>
             </label>
             <div class="dropdown-sign-in-elements">
-              <button class="button button-red" type="button">Войти</button>
+              <button class="button button-red" type="submit">Войти</button>
               <div class="">
                 <a class="dropdown-link" href="#">Забыли пароль?</a>
                 <a class="dropdown-link" href="#">Регистрация</a>
@@ -145,7 +146,7 @@
               </li>
             </ul>
             <div class="dropdown-cart-elements">
-              <button class="cart-button button button-red" type="button">Оформить заказ</button>
+              <button class="cart-button button button-red" type="submit">Оформить заказ</button>
               <span class="dropdown-cart-total-price">Итого: 790 ₽</span>
             </div>
           </form>
@@ -290,7 +291,7 @@
               alt="Мороженое Малинка." width="168" height="168">
             <div class="products-container">
               <p class="products-price">310 ₽/кг</p>
-              <button class="products-button">
+              <button class="products-button" type="button">
                 <span class="visually-hidden">Добавить в корзину.</span>
                 <svg class="products-icon-cart" width="15" height="14" viewBox="0 0 15 14" fill="currentColor"
                   xmlns="http://www.w3.org/2000/svg">
@@ -307,7 +308,7 @@
               alt="Мороженое Фисташка." width="168" height="168">
             <div class="products-container">
               <p class="products-price">340 ₽/кг</p>
-              <button class="products-button">
+              <button class="products-button" type="button">
                 <span class="visually-hidden">Добавить в корзину.</span>
                 <svg class="products-icon-cart" width="15" height="14" viewBox="0 0 15 14" fill="currentColor"
                   xmlns="http://www.w3.org/2000/svg">
@@ -324,7 +325,7 @@
               alt="Мороженое Крем-брюле с черничным джемом." width="168" height="168">
             <div class="products-container">
               <p class="products-price">330 ₽/кг</p>
-              <button class="products-button">
+              <button class="products-button" type="button">
                 <span class="visually-hidden">Добавить в корзину.</span>
                 <svg class="products-icon-cart" width="15" height="14" viewBox="0 0 15 14" fill="currentColor"
                   xmlns="http://www.w3.org/2000/svg">
@@ -341,7 +342,7 @@
               alt="Мороженое Бабл-гам." width="168" height="168">
             <div class="products-container">
               <p class="products-price">320 ₽/кг</p>
-              <button class="products-button">
+              <button class="products-button" type="button">
                 <span class="visually-hidden">Добавить в корзину.</span>
                 <svg class="products-icon-cart" width="15" height="14" viewBox="0 0 15 14" fill="currentColor"
                   xmlns="http://www.w3.org/2000/svg">
@@ -377,7 +378,7 @@
           <div class="subscription-form-container">
             <p class="subscription-form-text">Подпишитесь на нашу сладкую рассылку и будьте всегда в&nbsp;курсе всего
               самого вкусного, что у нас происходит. Обещаем не спамить и не слать всякой ненужной ерунды. Честно =)</p>
-            <input class="subscription-form-input" type="email" name="email" placeholder="email@example.com">
+            <input class="subscription-form-input" type="email" name="email" placeholder="email@example.com" required>
             <!--Для анимации загрузки повесить класс .loading-red-->
             <button class="subscription-form-button button button-red" type="submit">Отправить</button>
           </div>
@@ -400,11 +401,11 @@
               </span>
               <span class="delivery-tooltip-description">Введите дату рождения</span>
             </span>
-            <input class="delivery-input" type="text" name="date" placeholder="01.04.2020">
+            <input class="delivery-input" type="text" name="date" placeholder="01.04.2020" required>
           </label>
           <label class="delivery-label delivery-label-phone">
             <span class="delivery-label-name">Телефон</span>
-            <input class="delivery-input" type="tel" name="phone" placeholder="+7 800 999-00-00">
+            <input class="delivery-input" type="tel" name="phone" placeholder="+7 800 999-00-00" required>
           </label>
           <label class="delivery-label delivery-label-address">
             <span class="delivery-tooltip">
@@ -414,7 +415,8 @@
               </span>
               <span class="delivery-tooltip-description">Введите название улицы, дома и квартиры</span>
             </span>
-            <input class="delivery-input" type="text" name="address" placeholder="ул. Большая Конюшенная, 19/8">
+            <input class="delivery-input" type="text" name="address" placeholder="ул. Большая Конюшенная, 19/8"
+              required>
           </label>
           <!--Для анимации загрузки повесить класс .loading-red-->
           <button class="button button-red delivery-button" type="submit">Отправить</button>
@@ -429,9 +431,8 @@
           <a class="contacts-text contacts-text-phone" href="tel:+78128121212">+7 (812) 812-12-12</a>
           <p class="contacts-text contacts-text-time">(с 10 до 20 ежедневно)</p>
           <!--Для анимации загрузки повесить класс .loading-red-->
-          <button class="button button-red contacts-button modal-button-open-js" type="button"
-            data-modal="feedback">Форма
-            обратной связи</button>
+          <a class="button button-red contacts-button modal-button-open-js" href="#" data-modal="feedback">Форма
+            обратной связи</a>
         </div>
       </section>
     </main>
