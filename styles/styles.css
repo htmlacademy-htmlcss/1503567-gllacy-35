@@ -147,7 +147,7 @@ img {
 .container {
   width: 1170px;
   margin: 0 auto;
-  padding: 0 98px;
+  padding: 0 20px;
 }
 
 .header {
@@ -486,24 +486,24 @@ img {
   line-height: 20px;
   color: #2d3440;
   background-color: #ffffff;
-  width: 324px;
+  width: 292px;
 }
 
-.dropdown-input:focus {
-  outline: 2px solid #2d3440;
+.search {
+  width: 324px;
 }
 
 .dropdown-input:hover {
   color: #2d3440;
-  border: 1px solid #2d3440;
+  outline: 1px solid #2d3440;
 }
 
-.dropdown-input.is-error {
-  border: 1px solid #ea5454;
+.dropdown-input:hover:focus:invalid {
+  outline: 2px solid #ea5454;
 }
 
-.dropdown-input.is-error:hover {
-  border: 2px solid #ea5454;
+.dropdown-input:focus {
+  outline: 2px solid #2d3440;
 }
 
 .dropdown-input:disabled {
@@ -1252,21 +1252,17 @@ img {
   flex-grow: 1;
 }
 
-.subscription-form-input:focus {
-  outline: 2px solid #2d3440;
-}
-
 .subscription-form-input:hover {
   color: #2d3440;
-  border: 1px solid #2d3440;
+  outline: 1px solid #2d3440;
 }
 
-.subscription-form-input.is-error {
-  border: 1px solid #ea5454;
+.subscription-form-input:hover:focus:invalid {
+  outline: 2px solid #ea5454;
 }
 
-.subscription-form-input.is-error:hover {
-  border: 2px solid #ea5454;
+.subscription-form-input:focus {
+  outline: 2px solid #2d3440;
 }
 
 .subscription-form-input:disabled {
@@ -1438,21 +1434,17 @@ img {
   padding-left: 15px;
 }
 
-.delivery-input:focus {
-  outline: 2px solid #2d3440;
-}
-
 .delivery-input:hover {
   color: #2d3440;
-  border: 1px solid #2d3440;
+  outline: 1px solid #2d3440;
 }
 
-.delivery-input.is-error {
-  border: 1px solid #ea5454;
+.delivery-input:hover:focus:invalid {
+  outline: 2px solid #ea5454;
 }
 
-.delivery-input.is-error:hover {
-  border: 2px solid #ea5454;
+.delivery-input:focus {
+  outline: 2px solid #2d3440;
 }
 
 .delivery-input:disabled {
@@ -1462,7 +1454,7 @@ img {
   border: 1px solid #b9b9b9;
 }
 
-.delivery-input:disabled:hover {
+.delivery-input:hover:disabled {
   color: #2d3440;
   background-color: #e7e7e7;
   border: 1px solid #b9b9b9;
@@ -1738,6 +1730,10 @@ img {
   display: block;
   margin-left: auto;
   margin-top: 24px;
+}
+
+.modal-button-open-js {
+  display: inline-block;
 }
 
 .modal-button-close {
